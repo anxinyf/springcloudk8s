@@ -11,9 +11,9 @@ spec:
     spec:
       containers:
       - name: eureka
-        image: 192.168.56.60:5000/eureka:v1
+        image: springcloud/eureka:latest
         env:
-        - name: AUTHOR
-          value: eureka
+        - name: CONFIG_SERVER_URL
+          value: "CONFIG_SERVER_URL"
         ports:
-        - containerPort: 7000
+        - containerPort: 8761
